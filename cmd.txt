@@ -70,3 +70,4 @@ ls
    70  Error 2
    71  make clean
    72  history
+   dmesg | tail -n 20
