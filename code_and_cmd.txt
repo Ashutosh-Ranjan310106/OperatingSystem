@@ -1,0 +1,95 @@
+#include <linux/kernel.h>
+#include <linux/syscalls.h>                                                                                                                                                                                                                                                                                             SYSCALL_DEFINE0(test_call) {
+    printk("my custom system call");
+    return 0;
+}
+
+
+
+
+obj-y += test_call.o
+
+
+
+asmlinkage long sys_test_call(void);
+
+
+
+463     common  test_call	sys_test_calli#inci
+
+
+
+
+ls
+    2  ls -al
+    3  pwd
+    4  apt-get install vim
+    5  apt-get update
+    6  apt-get install vim
+    7  vim 1.c
+    8  clear
+    9  apt-get install trace
+   10  apt-get install strace
+   11  apt-get install gcc
+   12  vim 2.c
+   13  gcc 2.c -o aao
+   14  ./aao
+   15  vim 2.c
+   16  ./aao
+   17  strace ./aao
+   18  vim 2.c
+   19  man execve
+   20  unminimize
+   21  man execve
+   22  apt-get install man
+   23  man echo
+   24  man execve
+   25  man scanf
+   26  vim 3.c
+   27  gcc 3.c -o scanf
+   28  ./scanf
+   29  strace ./scanf
+   30  vim 3.c
+   31  man munmap
+   32  clear
+   33  man write
+   34  clear
+   35  ls
+   36  cd ~
+   37  pwd
+   38  ls
+   39  apt install build-essential libncurses-dev libssl-dev libelf-dev bison flex -y
+   40  apt-get install wget
+   41  man wget
+   42  wget -P ~/ https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.9.tar.xz
+   43  ls
+   44  tar -xvf ~/linux-6.12.9.tar.xz
+   45  uname -r
+   46  cd linux-6.12.9.tar.xz
+   47  cd linux-6.12.9.
+   48  cd linux-6.12.9
+   49  mkdir test_call
+   50  ls
+   51  vim test_call/test_call.c
+   52  cat test_call/test_call.c
+   53  vim test_call/test_call.c
+   54  cat test_call/test_call.c
+   55  vim test_call/Makefile
+   56  vim Makefile
+   57  vim include/linux/syscalls.h
+   58  apt-get install tree
+   59  tree -L 2
+   60  tree -L 1
+   61  find . -name "*syscall.tbl"
+   62  history
+   63  history > history_0.txt
+   64  cat history_0.txt
+   65  vim arch/x86/entry/syscalls/syscall_64.tbl
+   66  make menuconfig
+   67  apt install bc kmod systemd
+   68  nproc
+   69  make -j12
+   70  Error 2
+   71  make clean
+   72  history
+
