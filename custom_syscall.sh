@@ -14,13 +14,13 @@ apt-get install     build-essential     libncurses-dev     libssl-dev     libelf
 # Step 2: Download the Linux kernel source
 KERNEL_VERSION="6.12.9"
 KERNEL_URL="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${KERNEL_VERSION}.tar.xz"
-KERNEL_DIR="${HOME}/linux-${KERNEL_VERSION}"
+KERNEL_DIR="~/linux-${KERNEL_VERSION}"
 
 echo "Downloading Linux kernel source (version ${KERNEL_VERSION})..."
-wget -P "${HOME}" "${KERNEL_URL}"
+wget -P ~ "${KERNEL_URL}"
 
 echo "Extracting Linux kernel source..."
-tar -xvf "${HOME}/linux-${KERNEL_VERSION}.tar.xz" -C "${HOME}"
+tar -xvf "~/linux-${KERNEL_VERSION}.tar.xz" -C "~"
 
 # Step 3: Navigate to the kernel directory
 cd "${KERNEL_DIR}"
