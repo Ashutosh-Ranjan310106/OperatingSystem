@@ -1,25 +1,3 @@
-#include <linux/kernel.h>
-#include <linux/syscalls.h>                                                                                                                                                                                                                                                                                             SYSCALL_DEFINE0(test_call) {
-    printk("my custom system call");
-    return 0;
-}
-
-
-
-
-obj-y += test_call.o
-
-
-
-asmlinkage long sys_test_call(void);
-
-
-
-463     common  test_call	sys_test_calli#inci
-
-
-
-
 ls
     2  ls -al
     3  pwd
@@ -92,4 +70,3 @@ ls
    70  Error 2
    71  make clean
    72  history
-
