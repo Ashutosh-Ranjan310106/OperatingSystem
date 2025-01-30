@@ -70,4 +70,13 @@ ls
    70  Error 2
    71  make clean
    72  history
+   make modules_install -j12
+   make install -j8
+   sudo nano /etc/default/grub
+   GRUB_TIMEOUT=5
+   sudo grub-set-default --timeout=10
+   sudo update-grub
+
    dmesg | tail -n 20
+   
+
