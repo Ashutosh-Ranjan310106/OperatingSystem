@@ -16,7 +16,7 @@ asmlinkage long sys_test_call(void);
 
 
 
-463     common  test_call	sys_test_calli#inci
+463     common  test_call	sys_test_call
 
 
 

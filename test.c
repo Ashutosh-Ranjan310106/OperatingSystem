@@ -7,10 +7,11 @@
 
 int main() {
     long result = syscall(__NR_test_call); // Call the system call
-    if (result == 0) {
-        printf("System call executed successfully.\n");
-    } else {
+    if (result < 0) {
         printf("System call failed with error code %ld.\n", result);
+        
+    } else {
+        printf("congratulations System call executed successfully. now execute demsg to get system level call\n");
     }
     return 0;
 }
