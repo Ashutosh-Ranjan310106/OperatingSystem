@@ -20,7 +20,7 @@ echo "Downloading Linux kernel source (version ${KERNEL_VERSION})..."
 wget -P ~ "${KERNEL_URL}"
 
 echo "Extracting Linux kernel source..."
-tar -xvf "~/linux-${KERNEL_VERSION}.tar.xz" -C "~"
+tar -xvf "/~/linux-${KERNEL_VERSION}.tar.xz" -C "~"
 
 # Step 3: Navigate to the kernel directory
 cd "${KERNEL_DIR}"
