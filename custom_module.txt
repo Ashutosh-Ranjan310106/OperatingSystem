@@ -17,6 +17,9 @@ Static int test_lkm_exit(void){
 module_init(test_lkm_init);
 module_exit(test_lkm_exit);
 
+MODULE_LICENSE("GPL");        // Defines module licensing
+MODULE_AUTHOR("Your Name");   // Your name as the module author
+MODULE_DESCRIPTION("A simple Linux Kernel Module"); // Short description
 
 
 vim Makefile
