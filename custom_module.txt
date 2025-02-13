@@ -1,0 +1,33 @@
+
+mkdir test_lkm
+create a file inside upper folder -- vim_test_lkm.c
+#include<linux/init.h>
+#include<linux/module.h>
+#include <linux/kernel.h>
+
+Static int test_lkm_init(void){
+        printk(KERN_INFO “Inserting our first kernel module\n”);
+        return 0;
+}
+
+Static int test_lkm_exit(void){
+        printk(KERN_INFO ‘”Removing our first kernel module\n”);
+        return 0;
+}
+module_init(test_lkm_init);
+module_exit(test_lkm_exit);
+
+
+
+vim Makefile
+obj-n= test_lkM.o
+all: 
+    make -C /lib/modules/$(shell uname -r)/build M=$(PwD) modules
+clean
+    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+
+make
+sudo insmod test_lkm.ko
+lsmod – To check which modules are loaded
+dmesg
+sudo rmmod test_lkm.ko – To remove a LKM
