@@ -1,0 +1,30 @@
+  multi-level queue 
+  eq:-
+  real_time 
+  |_|_|_|_| p=0, q=2
+  |_|_|_|_| p=0, q=4
+  |_|_|_|_| p=0, q=8
+
+  multiple level feedback queue:-
+  1) process must can change there queue
+  2) the time quantum ince=rease with decrease in priority
+
+
+some operating system have a intermidat form of swaping- key idea it can be advantagis to remove a process from a memory and hence from contention of cpu thus deggre of multiprograming later this process can be reintroduce in the memory and reexecution can be continue from it is left
+swaping is typical nessery when the memory has to be overcomited    
+
+concurency:- interleaving of process
+tw0-paralism:- task paralism , data paralism
+chalanges in multi threaded programing 
+-> identifing task 
+-> balance 
+-> while identifing the task that run in parrel program must also ensure in certain curcumstances a program may not contribute a use in ga seprate core for such a task may not worth the task
+-> data spliting  
+-. data dependency
+-> test and debuging
+ 
+Q) read about amdals law
+Q) read about diffrent between single thread and multithread process
+Q) describ a cenario where a single thread program has to be converted to multi thread program specificly describe each of the five chalanges with respect to this scenarios
+
+
