@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void* threadd_function(void *arg){
+void* thread_function(void *arg){
     printf("thread number %ld\n", (long)arg);
     return arg;
 }
