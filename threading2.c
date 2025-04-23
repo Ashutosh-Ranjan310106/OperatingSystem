@@ -1,3 +1,7 @@
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 void recurcive_function(int count){
     int local_var = count;
     if (count>0){
@@ -5,10 +9,6 @@ void recurcive_function(int count){
         recurcive_function(count-1);
     }
 }
-
-#include <pthread.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 void* thread_function(void *arg){
     int local = 0;

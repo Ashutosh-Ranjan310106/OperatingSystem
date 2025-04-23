@@ -24,8 +24,8 @@ int main(void){
 
 
 
-gcc -pthread -o thread_example_3 threading3.count
+//gcc -pthread -o thread_example_3 threading3.count
 
-docs.kernal.org/userspace-api/netlink/intro.html
+//docs.kernal.org/userspace-api/netlink/intro.html
 
-github.com/mwarnig/netlink-examples (why and to use )
+//github.com/mwarnig/netlink-examples (why and to use )
