@@ -1,10 +1,18 @@
 #include <stdio.h>
 
 
-int main(){
+int main(int argc, char *argv[]){
+    for (int i = 0; i < argc; i++){
+        printf("%s ", argv[i]);
+    }
+    printf("\n");
+    if (argc != 3){
+        printf("Usage: <source_file> <destination_file>\n");
+        return 1;
+    }
     FILE *sptr, *dptr;
-    sptr = fopen("a.txt","r");
-    dptr = fopen("b.txt", "r");
+    sptr = fopen(argv[1],"r");
+    dptr = fopen(argv[2], "r");
     char ch;
     int paste = 1;
 
@@ -15,14 +23,14 @@ int main(){
         printf("destination file already have data do you want to replace old data (Y/N):- ");
         char i;
         scanf("%c",&i);
-        if (i == 'Y'){
+        if (i == 'Y' || i == 'y'){
             paste = 1;
         }
     }
 
     if (paste == 1){
         fclose(dptr);
-        dptr = fopen("b.txt", "w");
+        dptr = fopen(argv[2], "w");
     }
 
     while (paste){
@@ -34,7 +42,7 @@ int main(){
     }
 
     
-    printf("");
+    printf(" ");
     fclose(sptr);
     fclose(dptr);
     return 0;

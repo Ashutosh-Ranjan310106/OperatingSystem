@@ -5,7 +5,7 @@
 #include <sys/un.h>
 #include <unistd.h>
 
-#define SOCKET_PATH "/tmp/my_unix_socket"
+#define SOCKET_PATH "127.0.0.1:8080"
 #define BUFFER_SIZE 1024
 
 int main() {
@@ -43,19 +43,22 @@ int main() {
     printf("Server is listening...\n");
 
     // Accept a connection
-    client_fd = accept(server_fd, NULL, NULL);
-    if (client_fd == -1) {
-        perror("accept error");
-        exit(EXIT_FAILURE);
+
+    while (buffer[0] != 'q') {
+        client_fd = accept(server_fd, NULL, NULL);
+        if (client_fd == -1) {
+            perror("accept error");
+            exit(EXIT_FAILURE);
+        }
+        // Receive message
+
+        read(client_fd, buffer, BUFFER_SIZE);
+
+        printf("Received from client: %s\n", buffer);
+
+        // Send response
+        write(client_fd, "Hello from server!", 19);
     }
-
-    // Receive message
-    read(client_fd, buffer, BUFFER_SIZE);
-    printf("Received from client: %s\n", buffer);
-
-    // Send response
-    write(client_fd, "Hello from server!", 19);
-
     // Close sockets
     close(client_fd);
     close(server_fd);

@@ -1,1 +1,4 @@
-hello world
+Here are some commonly used file I/O commands in C similar to ch = fgetc(dptr);:
+
+File Opening and Closing
+

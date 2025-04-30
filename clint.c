@@ -5,7 +5,7 @@
 #include <sys/un.h>
 #include <unistd.h>
 
-#define SOCKET_PATH "/tmp/my_unix_socket"
+#define SOCKET_PATH "127.0.0.1:8080"
 #define BUFFER_SIZE 1024
 
 int main() {
@@ -32,7 +32,10 @@ int main() {
     }
 
     // Send message
-    write(client_fd, "Hello from client!", 19);
+    printf("enter message to send to server: ");
+    char msg[BUFFER_SIZE];
+    scanf("%s", msg);
+    write(client_fd, msg, strlen(msg));
 
     // Receive response
     read(client_fd, buffer, BUFFER_SIZE);
