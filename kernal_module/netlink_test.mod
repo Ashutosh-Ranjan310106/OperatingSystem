@@ -1,0 +1,2 @@
+/home/ashu/kernal_module/netlink_test.o
+

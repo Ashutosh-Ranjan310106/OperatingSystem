@@ -1,0 +1,1 @@
+cmd_/home/ashu/add_lkm/add_process_lkm.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -z noexecstack   --build-id  -T ./scripts/module-common.lds -o /home/ashu/add_lkm/add_process_lkm.ko /home/ashu/add_lkm/add_process_lkm.o /home/ashu/add_lkm/add_process_lkm.mod.o;  true

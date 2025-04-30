@@ -1,0 +1,1 @@
+cmd_/home/ashu/kernal_module/netlink_test.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -z noexecstack   --build-id  -T ./scripts/module-common.lds -o /home/ashu/kernal_module/netlink_test.ko /home/ashu/kernal_module/netlink_test.o /home/ashu/kernal_module/netlink_test.mod.o;  true
