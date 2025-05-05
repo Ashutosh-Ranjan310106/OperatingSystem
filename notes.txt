@@ -27,4 +27,101 @@ Q) read about amdals law
 Q) read about diffrent between single thread and multithread process
 Q) describ a cenario where a single thread program has to be converted to multi thread program specificly describe each of the five chalanges with respect to this scenarios
 
+Q) in a case of multithread scenarios where should heap data should be managed(at process level or at individaul level or at both) why
 
+Q)associate a single thread with one core strictly
+
+Q) write a program for multithread merge short where the thread are created for all the sub probels at level three for any sub array prior to level three create a child process beyond level three use recurssion in same thread          
+
+raise contion a sition where several try to access and manipute a data at same time
+consider a system consisting a n process each   
+
+hard ware support for syncronyjation
+memory barrier
+the memory garenty provide by the hardware(core) (
+    strong order :- where memory modification is imediatly visiable to other process
+    weakly orderd :- where memory modification is may or may not be imediatly visiable to other process
+)
+atomicity hardware:- test_and_set() and compare_and_swap()
+atomic variable?
+
+q) give a sequence of operation for process p0 .. pi and sudo code of mutex locks along with line number and sudo code of process p0 to pi provide exact sequenvce of operation on the mutex laws that were executed for a given order of process
+mutex lock
+Q) why memory barrier are barrier  
+code1)
+
+Seamphore
+binary :- value ranging from 0 or 1
+counting :- value ranging from 0 to number of resouse geater than 1
+
+#define N 10
+int buffer[N];
+int in=0, out=0;
+
+Seamphore mutex = {1, emptyQueue()};
+Seamphore empty = {N, emptyQueue()};
+Seamphore full = {0, emptyQueue()};
+
+
+
+produce comsumer using Seamphore
+assume that the the pool of resouse consit of N spaces each capable of holding one one item the mutex binary semapore provide mutual exclution for accessto the resoure poool and is initilise to the value one
+the empty and full semapore count the number of empty and full slot in the buffer respectively
+a moniter 
+{
+  //shared variable
+  condition x, y
+  procedure p1()
+  procedure p2()
+}
+
+
+
+bounded buffer problem
+
+
+
+
+moniter:- higher level synchronijation construct (adt)
+what are the parts of this construct 
+mutualy exclusive procesure 
+condition varibles used for wating and signaling
+
+
+internal implementation of moniter
+a mutex lock ensures that only one thread a task or process is active int moter at any time
+
+readers-writers problem:-
+resoure alocation
+resource  requested(request edge)
+p0---->R
+resource get(assingment edge  )
+p0<-----R
+p0--->R--->p1
+
+
+p0<---r---[R1]
+
+characterstics
+multiple readers can rread simentenesly each write need exclusive acccess in ideal solution of this problem no reader should be kept wating unless write has accured the resource
+two posible solution
+  1-readers preference:- multiple readers can acces the resource concurently writes must wait untile all "current reader" are done new reader are allowed even if the write is wating
+    draw back:- write starvation
+  2-writes preference:- write is given priority over "new" reader if a write is wating no new reader are allowed in
+    benfit:- no write starvation
+    draback:- reader wait untile writers
+
+
+The Dining Philosophers Problem:-
+nResouse and n process
+each process require 2 resource
+(semapore and lock are also resource)
+characterstics of dead lock:-
+  four condition for dead lock
+  1) mutual exclution
+  2) hold and wait
+      a process/thread must be holding at least one resource and wating to accure addition resoures that are currently held by other process/threaded
+  3) no premption 
+
+  4) circular wait
+  if there is set of process p0 to p1 which are sharing the same aet of resource then inruduce an order of resource access
